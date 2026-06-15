@@ -1,0 +1,29 @@
+Exercício de Programação Orientada a Objetos
+
+1. Modele uma classe `Produto` para representar um produto em uma loja. A classe deve ter os seguintes atributos:
+   - nome (string)
+   - preco (float)
+   - quantidade_em_estoque (int)
+
+   E os seguintes métodos:
+   - `__init__`: construtor que inicializa os atributos.
+   - `adicionar_estoque(quantidade)`: aumenta a quantidade em estoque.
+   - `retirar_estoque(quantidade)`: diminui a quantidade em estoque (verificando se há suficiente).
+   - `calcular_valor_total()`: retorna o valor total do produto em estoque (preço * quantidade).
+
+2. Crie uma subclasse `ProdutoPerecivel` que herde de `Produto` e adicione:
+   - atributo `data_de_validade` (string no formato "dd/mm/aaaa")
+   - método `esta_valido()` que retorna True se a data de validade for futura (você pode simplificar comparando apenas o ano, ou usar uma data fixa para comparação).
+
+3. Escreva um programa que:
+   - Crie instâncias de `Produto` e `ProdutoPerecivel`.
+   - Demonstre o uso dos métodos.
+   - Mostre o polimorfismo: defina um método `exibir_info()` na classe `Produto` que retorne uma string com os detalhes do produto, e sobrescreva esse método em `ProdutoPerecivel` para incluir a data de validade e se está válido.
+
+   Exemplo de saída esperada (não precisa ser exatamente assim):
+   Produto: Arroz, Preço: 5.99, Estoque: 10, Valor Total: 59.90
+   Produto Perecível: Leite, Preço: 4.50, Estoque: 5, Validade: 15/06/2026, Válido: Sim, Valor Total: 22.50
+
+4. (Opcional) Trate exceções nos métodos `retirar_estoque` para não permitir retirar mais do que o disponível, lançando uma exceção personalizada `EstoqueInsuficienteError`.
+
+Boa prática: documente suas classes e métodos com docstrings.
