@@ -3,7 +3,7 @@
 public class Produto {
         String nome;
         private double preco;
-        private int quantidade;
+        int quantidade;
         int receQuantidade;
         int minQuantidade;
 
@@ -35,5 +35,10 @@ public class Produto {
     public double calcularValorTotal(){
         return quantidade*preco;
 
+    }
+
+    public String mostrarInfo(){
+            return
+                    System.out.printf("A quantidade de %s é de %d com o preço %.2f\n", nome, quantidade, preco).toString();
     }
 }
